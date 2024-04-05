@@ -1,7 +1,6 @@
 ---
 import '../styles/main.css'
 
-const heading = "Smart Mail";
 const subheading = "The smarter email assistant.";
 const appIcon = "/images/app-icon.svg";
 const extensionScreenshot = "/images/extensionScreenshot.png";
@@ -41,7 +40,21 @@ const authors = [
 ];
 const pageTitle = "Smart Mail"
 const favicon = "/images/favicon.svg"
+
 ---
+
+<script>
+	
+	const heading = "Smart Mail"
+	const headingContainer = document.getElementById('Heading');
+	// Create a single span element for the entire heading text
+	const span = document.createElement('span');
+	span.textContent = heading;
+
+	// Append the span element to the heading container
+	headingContainer?.appendChild(span);
+
+</script>
 
 <html lang="en">
 	<head>
@@ -56,7 +69,8 @@ const favicon = "/images/favicon.svg"
 			<main>
 				<div class="text-container">
 					<img src={appIcon} class="app-icon">
-					<h1 class="heading">{heading}</h1>
+					<h1 id="Heading" class="heading jump-letters">{<span></span>}</h1>
+
 					<div class="card">
 						<h2 class="subheading">{subheading}</h2>
 						<div class="badge-container">
