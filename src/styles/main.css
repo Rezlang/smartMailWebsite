@@ -8,6 +8,7 @@
   :root {
     --accent: #FF9305;
     --secondary: #8e8e93;
+    --cardAccent: #8e8e93;
   }
   
   * {
@@ -46,7 +47,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    padding: 0;
+    padding: 0 8%;
   }
   
   main {
@@ -94,6 +95,19 @@
   .badge:hover {
     cursor: pointer;
   }
+
+  .card {
+    outline: var(--cardAccent);
+    padding: 2%;
+    border-radius: 5%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover {
+    background-color: var(--cardAccent);
+    color: white;
+  }
   
   .authors {
     font-weight: 300;
@@ -108,8 +122,13 @@
     text-decoration: underline;
   }
   
-  .app-screenshot {
-    width: 220px;
+  .extension-screenshot {
+    width: 60%;
+  }
+
+  .page-screenshot {
+    padding-top: 25px;
+    width: 65%;
   }
   
   footer {
@@ -118,7 +137,14 @@
     padding-top: 30px;
     overflow: hidden;
   }
-  
+  .foot{ 
+    margin-top: 20px;
+    height: 80px;
+    background-color: var(--accent);
+    color: white;
+    font-size: 1rem;
+  }
+
   .footer-image {
     width: 100%;
     height: auto;
@@ -131,7 +157,8 @@
   @media (max-width: 768px) {
     main {
       flex-direction: column;
-      padding: 40px;
+      padding: 20%;
+
     }
     .text-container {
       width: 100%;
